@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #FFEFE7;
+  font-size: 62.5%;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+}
+header .nav-menu {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  margin: 0 auto;
+}
+header .nav-menu .logo {
+  color: #7C6A0A;
+  font-size: 1.4rem;
+}
+header .nav-menu .nav-menu__container-icons {
+  display: flex;
+  list-style: none;
+}
+header .nav-menu .nav-menu__container-icons .icon-destok {
+  display: none;
+}
+
+main {
+  width: 100%;
+  height: auto;
+}
+main .hero {
+  width: 90%;
+  margin: 0 auto;
+}
+main .hero .hero-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .hero .hero-container img {
+  width: 100%;
+  height: 368px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .hero .hero-container .hero-container__information {
+  padding: 15px;
+}
+main .hero .hero-container .hero-container__information h1 {
+  color: #7C6A0A;
+  font-size: 2.4rem;
+  line-height: 2.7rem;
+  padding-bottom: 15px;
+}
+main .hero .hero-container .hero-container__information p {
+  color: #7C6A0A;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+main .hero .hero-container .hero-container__information button {
+  width: 110px;
+  height: 40px;
+  border: none;
+  border-radius: 50px;
+  background-color: #FA9500;
+  color: #FFEFE7;
+  margin-top: 10px;
+}/*# sourceMappingURL=main.css.map */
