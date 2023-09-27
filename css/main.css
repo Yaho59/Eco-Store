@@ -57,7 +57,7 @@ main .hero .hero-container img {
      object-fit: cover;
 }
 main .hero .hero-container .hero-container__information {
-  padding: 15px;
+  padding: 20px 2px;
 }
 main .hero .hero-container .hero-container__information h1 {
   color: #7C6A0A;
@@ -77,5 +77,61 @@ main .hero .hero-container .hero-container__information button {
   border-radius: 50px;
   background-color: #FA9500;
   color: #FFEFE7;
-  margin-top: 10px;
+  margin: 10px 0;
+}
+main .product-section {
+  width: 100%;
+}
+main .product-section h2 {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: #7C6A0A;
+  padding-left: 19px;
+  padding-bottom: 30px;
+}
+main .product-section .product-container-healthcare {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  height: 340px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  margin: 0 auto;
+}
+main .product-section .product-container-healthcare .healthcare-content__card {
+  display: flex;
+  scroll-snap-align: center;
+  flex-direction: column;
+  place-items: center;
+  width: 200px;
+  min-width: 200px;
+  height: 310px;
+  background-color: #FFDAC6;
+  color: #7C6A0A;
+}
+main .product-section .product-container-healthcare .healthcare-content__card .icon {
+  align-self: end;
+  padding: 5px;
+}
+main .product-section .product-container-healthcare .healthcare-content__card .image {
+  width: 150px;
+  height: 190px;
+}
+main .product-section .product-container-healthcare .healthcare-content__card .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .product-section .product-container-healthcare .healthcare-content__card h3 {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  padding-top: 10px;
+}
+main .product-section .product-container-healthcare .healthcare-content__card p {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  padding: 10px;
 }/*# sourceMappingURL=main.css.map */
