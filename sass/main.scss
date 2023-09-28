@@ -93,34 +93,39 @@ main{
             padding-left: 19px;
             padding-bottom: 30px;
         }
+        .title-furniture{
+            margin-top: 15px;
+        }
         .product-container-healthcare{
             width: 90%;
             display: flex;
             justify-content: center;
             gap: 10px;
-            height: 340px;
+            height: 345px;
             overflow-x: scroll;
             overscroll-behavior-x: contain;
             scroll-snap-type: x proximity;
             margin: 0 auto;
             .healthcare-content__card{
                 display: flex;
-                scroll-snap-align: center;
+                // scroll-snap-align: center;
                 flex-direction: column;
                 place-items: center;
                 width: 200px;
                 min-width: 200px;
-                height: 310px;
+                height: 320px;
                 background-color: $secondary-color;
                 color: $primary-text-color;
+                border-radius: 5px;
+                box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
         
                 .icon{
                     align-self: end;
                     padding: 5px;
                 }
                .image{
-                width: 150px;
-                height: 190px;
+                width: 160px;
+                height: 180px;
         
                 img{
                     width: 100%;
@@ -132,14 +137,24 @@ main{
                h3{
                 font-size: 1.6rem;
                 line-height: 2.0rem;
-                padding-top: 10px;
+                align-self: start;
+                padding: 10px 19px;
                }
                p{
                 font-size: 1.2rem;
                 line-height: 1.6rem;
-                padding: 10px;
+                padding-left: 19px
                }
             }
         } 
-    } 
+
+        .product-container-furniture{
+            @extend .product-container-healthcare;
+            .furniture-content__card{
+                @extend .healthcare-content__card;
+                background-color: $tertiary-color;
+                color: $primary-color;
+            }
+        }
+    }
 }

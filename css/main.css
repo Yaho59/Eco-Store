@@ -89,49 +89,58 @@ main .product-section h2 {
   padding-left: 19px;
   padding-bottom: 30px;
 }
-main .product-section .product-container-healthcare {
+main .product-section .title-furniture {
+  margin-top: 15px;
+}
+main .product-section .product-container-healthcare, main .product-section .product-container-furniture {
   width: 90%;
   display: flex;
   justify-content: center;
   gap: 10px;
-  height: 340px;
+  height: 345px;
   overflow-x: scroll;
   overscroll-behavior-x: contain;
   scroll-snap-type: x proximity;
   margin: 0 auto;
 }
-main .product-section .product-container-healthcare .healthcare-content__card {
+main .product-section .product-container-healthcare .healthcare-content__card, main .product-section .product-container-furniture .healthcare-content__card, main .product-section .product-container-furniture .furniture-content__card {
   display: flex;
-  scroll-snap-align: center;
   flex-direction: column;
   place-items: center;
   width: 200px;
   min-width: 200px;
-  height: 310px;
+  height: 320px;
   background-color: #FFDAC6;
   color: #7C6A0A;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
 }
-main .product-section .product-container-healthcare .healthcare-content__card .icon {
+main .product-section .product-container-healthcare .healthcare-content__card .icon, main .product-section .product-container-furniture .healthcare-content__card .icon, main .product-section .product-container-furniture .furniture-content__card .icon {
   align-self: end;
   padding: 5px;
 }
-main .product-section .product-container-healthcare .healthcare-content__card .image {
-  width: 150px;
-  height: 190px;
+main .product-section .product-container-healthcare .healthcare-content__card .image, main .product-section .product-container-furniture .healthcare-content__card .image, main .product-section .product-container-furniture .furniture-content__card .image {
+  width: 160px;
+  height: 180px;
 }
-main .product-section .product-container-healthcare .healthcare-content__card .image img {
+main .product-section .product-container-healthcare .healthcare-content__card .image img, main .product-section .product-container-furniture .healthcare-content__card .image img, main .product-section .product-container-furniture .furniture-content__card .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .product-section .product-container-healthcare .healthcare-content__card h3 {
+main .product-section .product-container-healthcare .healthcare-content__card h3, main .product-section .product-container-furniture .healthcare-content__card h3, main .product-section .product-container-furniture .furniture-content__card h3 {
   font-size: 1.6rem;
   line-height: 2rem;
-  padding-top: 10px;
+  align-self: start;
+  padding: 10px 19px;
 }
-main .product-section .product-container-healthcare .healthcare-content__card p {
+main .product-section .product-container-healthcare .healthcare-content__card p, main .product-section .product-container-furniture .healthcare-content__card p, main .product-section .product-container-furniture .furniture-content__card p {
   font-size: 1.2rem;
   line-height: 1.6rem;
-  padding: 10px;
+  padding-left: 19px;
+}
+main .product-section .product-container-furniture .furniture-content__card {
+  background-color: #BABD8D;
+  color: #FFEFE7;
 }/*# sourceMappingURL=main.css.map */
