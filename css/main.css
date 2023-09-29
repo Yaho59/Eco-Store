@@ -95,12 +95,9 @@ main .product-section .title-furniture {
 main .product-section .product-container-healthcare, main .product-section .product-container-furniture {
   width: 90%;
   display: flex;
-  justify-content: center;
   gap: 10px;
   height: 345px;
   overflow-x: scroll;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x proximity;
   margin: 0 auto;
 }
 main .product-section .product-container-healthcare .healthcare-content__card, main .product-section .product-container-furniture .healthcare-content__card, main .product-section .product-container-furniture .furniture-content__card {
@@ -144,6 +141,9 @@ main .product-section .product-container-furniture .furniture-content__card {
   background-color: #BABD8D;
   color: #FFEFE7;
 }
+main .info-section {
+  margin-bottom: 10px;
+}
 main .info-section h2 {
   font-size: 1.8rem;
   line-height: 2.2rem;
@@ -169,6 +169,7 @@ main .info-section .container-aboutus__information .information__mission p, main
   font-size: 1.4rem;
   line-height: 1.7rem;
   color: #E86424;
+  text-align: center;
 }
 main .info-section .container-aboutus__information .information__innovation {
   margin-top: 20px;
@@ -190,10 +191,14 @@ main .info-section .container-gallery .container-gallery__photos {
 }
 main .info-section .container-gallery .container-gallery__photos img {
   width: 100%;
+  max-width: 320px;
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 8px;
+}
+main .info-section .title-location {
+  padding-bottom: 30px;
 }
 main .info-section .container-location {
   width: 90%;
@@ -204,4 +209,39 @@ main .info-section .container-location article img {
   height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+main .info-section .container-location article h3 {
+  color: #FA9500;
+  margin-top: 5px;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  font-weight: 700;
+}
+main .info-section .container-location article p {
+  color: #FA9500;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #FA9500;
+  color: #FFEFE7;
+  padding: 10px 0;
+}
+footer .container-footer {
+  width: 90%;
+  margin: 0 auto;
+}
+footer .container-footer .logo-footer {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  padding-bottom: 10px;
+}
+footer .container-footer .container-icons__footer {
+  display: flex;
+  gap: 5px;
+  place-items: center;
+  margin-top: 20px;
 }/*# sourceMappingURL=main.css.map */

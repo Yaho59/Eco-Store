@@ -99,13 +99,13 @@ main{
         .product-container-healthcare{
             width: 90%;
             display: flex;
-            justify-content: center;
             gap: 10px;
             height: 345px;
             overflow-x: scroll;
-            overscroll-behavior-x: contain;
-            scroll-snap-type: x proximity;
             margin: 0 auto;
+            
+
+            
             .healthcare-content__card{
                 display: flex;
                 // scroll-snap-align: center;
@@ -145,8 +145,9 @@ main{
                 line-height: 1.6rem;
                 padding-left: 19px
                }
-            }
+            } 
         } 
+        
 
         .product-container-furniture{
             @extend .product-container-healthcare;
@@ -158,7 +159,12 @@ main{
         }
     }
 
+    // .product-container-healthcare::-webkit-scrollbar-thumb{
+    //     background-color: #FA9500;
+    // }
+
     .info-section{
+        margin-bottom: 10px;
         h2{
             font-size: 1.8rem;
             line-height: 2.2rem;
@@ -182,7 +188,7 @@ main{
                     font-size: 1.4rem;
                     line-height: 1.7rem;
                     color: #E86424;
-                    
+                    text-align: center;
                 }
             }
             .information__innovation{
@@ -205,11 +211,15 @@ main{
                 margin-bottom: 20px;
                 img{
                     width: 100%;
+                    max-width: 320px;
                     height: 300px;
                     object-fit: cover;
                     border-radius: 8px;
                 }
             }
+        }
+        .title-location{
+            padding-bottom: 30px;
         }
         .container-location{
             width: 90%;
@@ -220,7 +230,44 @@ main{
                     height: 400px;
                     object-fit: cover;
                 }
+                h3{
+                    color: #FA9500;
+                    margin-top: 5px;
+                    font-size: 1.6rem;
+                    line-height: 1.9rem;
+                    font-weight: 700;
+                }
+                p{
+                    color: #FA9500;
+                    font-size: 1.2rem;
+                    line-height: 1.6rem;
+                }
             }
+        }
+    }
+    
+}
+footer{
+    width: 100%;
+    height: auto;
+    background-color: #FA9500;
+    color: $primary-color;
+    padding: 10px 0;
+    .container-footer{
+        width: 90%;
+        margin: 0 auto;
+
+        .logo-footer{
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            padding-bottom: 10px;
+        }
+
+        .container-icons__footer{
+            display: flex;
+            gap: 5px;
+            place-items: center;
+            margin-top: 20px;
         }
     }
     
