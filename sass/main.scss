@@ -4,111 +4,155 @@ $tertiary-color: #BABD8D;
 $primary-text-color: #7C6A0A;
 $font-stack: 'IBM Plex Sans', sans-serif;
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     background-color: $primary-color;
     font-size: 62.5%;
     font-family: $font-stack;
 }
 
+@mixin tablet(){
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin portatil(){
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
 // Aca estilos del header
-header{
+header {
     width: 100%;
     height: 60px;
-    .nav-menu{
+
+    .nav-menu {
         width: 90%;
         height: 100%;
         display: flex;
         justify-content: space-between;
         place-items: center;
         margin: 0 auto;
-        .logo{
+
+        .logo {
             color: #7C6A0A;
             font-size: 1.4rem;
         }
-        .nav-menu__container-icons{
+
+        .nav-menu__container-icons {
             display: flex;
             list-style: none;
-            .icon-destok{
+
+            .icon-destok {
                 display: none;
             }
         }
     }
 }
 
-main{
+main {
     width: 100%;
     height: auto;
-    .hero{
+
+    .hero {
         width: 90%;
         margin: 0 auto;
 
-        .hero-container{
+        .hero-container {
             width: 100%;
-            max-width: 500px;
+            max-width: 900px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            img{
-               width: 100%;
-               height: 368px;
-               object-fit: cover;
-           }
-           .hero-container__information{
-            padding: 20px 2px;
-            h1{
-                color: $primary-text-color;
-                font-size: 2.4rem;
-                line-height: 2.7rem;
-                padding-bottom: 15px;
+
+            @include tablet(){
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                place-items: center;
+                gap: 50px;
             }
-            p{
-                color: $primary-text-color;
-                font-size: 1.4rem;
-                line-height: 1.7rem;
+
+            img {
+                width: 100%;
+                height: 368px;
+                object-fit: cover;
             }
-            button{
-                width: 110px;
-                height: 40px;
-                border: none;
-                border-radius: 50px;
-                background-color: #FA9500;
-                color: $primary-color;
-                margin: 10px 0;
+
+            .hero-container__information {
+                padding: 20px 2px;
+
+                h1 {
+                    color: $primary-text-color;
+                    font-size: 2.4rem;
+                    line-height: 2.7rem;
+                    padding-bottom: 15px;
+                }
+
+                p {
+                    color: $primary-text-color;
+                    font-size: 1.4rem;
+                    line-height: 1.7rem;
+                    @include tablet(){
+                        font-size: 1.6rem;
+                        line-height: 1.9rem;
+                    }
+                }
+
+                button {
+                    width: 110px;
+                    height: 40px;
+                    border: none;
+                    border-radius: 50px;
+                    background-color: #FA9500;
+                    color: $primary-color;
+                    margin: 10px 0;
+                }
+
             }
-           }
-       }
+            
+        }
     }
-    .product-section{
+
+    .product-section {
         width: 100%;
-        h2{
+
+        h2 {
             font-size: 1.8rem;
             line-height: 2.2rem;
             color: $primary-text-color;
             padding-left: 19px;
             padding-bottom: 30px;
+            @include tablet(){
+                padding-left: 40px;
+                font-size: 2.0rem;
+                line-height: 2.4rem;
+            }
         }
-        .title-furniture{
+
+        .title-furniture {
             margin-top: 15px;
         }
-        .product-container-healthcare{
+
+        .product-container-healthcare {
             width: 90%;
             display: flex;
             gap: 10px;
             height: 345px;
             overflow-x: scroll;
             margin: 0 auto;
-            
 
-            
-            .healthcare-content__card{
+
+
+            .healthcare-content__card {
                 display: flex;
-                // scroll-snap-align: center;
                 flex-direction: column;
                 place-items: center;
                 width: 200px;
@@ -118,40 +162,43 @@ main{
                 color: $primary-text-color;
                 border-radius: 5px;
                 box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
-        
-                .icon{
+
+                .icon {
                     align-self: end;
                     padding: 5px;
                 }
-               .image{
-                width: 160px;
-                height: 180px;
-        
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-               }
-        
-               h3{
-                font-size: 1.6rem;
-                line-height: 2.0rem;
-                align-self: start;
-                padding: 10px 19px;
-               }
-               p{
-                font-size: 1.2rem;
-                line-height: 1.6rem;
-                padding-left: 19px
-               }
-            } 
-        } 
-        
 
-        .product-container-furniture{
+                .image {
+                    width: 160px;
+                    height: 180px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                h3 {
+                    font-size: 1.6rem;
+                    line-height: 2.0rem;
+                    align-self: start;
+                    padding: 10px 19px;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    line-height: 1.6rem;
+                    padding-left: 19px
+                }
+            }
+        }
+
+
+        .product-container-furniture {
             @extend .product-container-healthcare;
-            .furniture-content__card{
+
+            .furniture-content__card {
                 @extend .healthcare-content__card;
                 background-color: $tertiary-color;
                 color: $primary-color;
@@ -163,53 +210,78 @@ main{
     //     background-color: #FA9500;
     // }
 
-    .info-section{
+    .info-section {
         margin-bottom: 10px;
-        h2{
+
+        h2 {
             font-size: 1.8rem;
             line-height: 2.2rem;
             color: $primary-text-color;
             padding-left: 19px;
             padding-bottom: 80px;
             margin-top: 15px;
+            @include tablet(){
+                padding-left: 40px;
+            }
         }
-        .container-aboutus__information{
+
+        .container-aboutus__information {
             width: 90%;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             place-items: center;
             margin: 0 auto;
-            .information__mission{
+            @include tablet(){
+                flex-direction: row;
+            }
+
+            .information__mission {
                 display: flex;
                 flex-direction: column;
                 place-items: center;
                 gap: 5px;
-                p{
+                @include tablet(){
+                    flex-direction: row;
+                }
+
+                p {
                     font-size: 1.4rem;
                     line-height: 1.7rem;
                     color: #E86424;
                     text-align: center;
                 }
             }
-            .information__innovation{
+
+            .information__innovation {
                 @extend .information__mission;
                 margin-top: 20px;
                 margin-bottom: 10px;
             }
         }
-        .title-gallery{
+
+        .title-gallery {
             padding-bottom: 30px;
         }
-        .container-gallery{
+
+        .container-gallery {
             width: 90%;
             margin: 0 auto;
-            .container-gallery__photos{
+
+            .container-gallery__photos {
                 display: flex;
                 flex-direction: column;
                 place-items: center;
                 gap: 10px;
                 margin-bottom: 20px;
-                img{
+                
+                @include tablet(){
+                    flex-direction: row;
+                    justify-content: space-evenly;
+
+                }
+
+                img {
                     width: 100%;
                     max-width: 320px;
                     height: 300px;
@@ -218,26 +290,31 @@ main{
                 }
             }
         }
-        .title-location{
+
+        .title-location {
             padding-bottom: 30px;
         }
-        .container-location{
+
+        .container-location {
             width: 90%;
             margin: 0 auto;
-            article{
-                img{
+
+            article {
+                img {
                     width: 100%;
                     height: 400px;
                     object-fit: cover;
                 }
-                h3{
+
+                h3 {
                     color: #FA9500;
                     margin-top: 5px;
                     font-size: 1.6rem;
                     line-height: 1.9rem;
                     font-weight: 700;
                 }
-                p{
+
+                p {
                     color: #FA9500;
                     font-size: 1.2rem;
                     line-height: 1.6rem;
@@ -245,30 +322,35 @@ main{
             }
         }
     }
-    
+
 }
-footer{
+
+footer {
     width: 100%;
     height: auto;
     background-color: #FA9500;
     color: $primary-color;
     padding: 10px 0;
-    .container-footer{
+
+    .container-footer {
         width: 90%;
         margin: 0 auto;
 
-        .logo-footer{
+        .logo-footer {
             font-size: 1.4rem;
             line-height: 1.8rem;
             padding-bottom: 10px;
         }
 
-        .container-icons__footer{
+        .container-icons__footer {
             display: flex;
             gap: 5px;
             place-items: center;
             margin-top: 20px;
+            @include tablet(){
+                justify-content: center;
+            }
         }
     }
-    
 }
+
