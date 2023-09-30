@@ -44,11 +44,10 @@ main .hero {
 }
 main .hero .hero-container {
   width: 100%;
-  max-width: 900px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 @media screen and (min-width: 768px) {
   main .hero .hero-container {
@@ -58,11 +57,28 @@ main .hero .hero-container {
     gap: 50px;
   }
 }
-main .hero .hero-container img {
+@media screen and (min-width: 1024px) {
+  main .hero .hero-container {
+    gap: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+main .hero .hero-container .hero-container__image {
+  width: 100%;
+}
+main .hero .hero-container .hero-container__image img {
   width: 100%;
   height: 368px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 8px;
+}
+@media screen and (min-width: 1024px) {
+  main .hero .hero-container .hero-container__image img {
+    height: 500px;
+    border-radius: 10px;
+  }
 }
 main .hero .hero-container .hero-container__information {
   padding: 20px 2px;
@@ -92,9 +108,16 @@ main .hero .hero-container .hero-container__information button {
   background-color: #FA9500;
   color: #FFEFE7;
   margin: 10px 0;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  main .hero .hero-container .hero-container__information button {
+    width: 130px;
+  }
 }
 main .product-section {
   width: 100%;
+  height: auto;
 }
 main .product-section h2 {
   font-size: 1.8rem;
@@ -110,6 +133,11 @@ main .product-section h2 {
     line-height: 2.4rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  main .product-section h2 {
+    padding-left: 72px;
+  }
+}
 main .product-section .title-furniture {
   margin-top: 15px;
 }
@@ -117,9 +145,22 @@ main .product-section .product-container-healthcare, main .product-section .prod
   width: 90%;
   display: flex;
   gap: 10px;
-  height: 345px;
+  height: auto;
   overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
   margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  main .product-section .product-container-healthcare, main .product-section .product-container-furniture {
+    overflow-x: visible;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 60px;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    max-width: 1000px;
+  }
 }
 main .product-section .product-container-healthcare .healthcare-content__card, main .product-section .product-container-furniture .healthcare-content__card, main .product-section .product-container-furniture .furniture-content__card {
   display: flex;
@@ -136,6 +177,7 @@ main .product-section .product-container-healthcare .healthcare-content__card, m
 main .product-section .product-container-healthcare .healthcare-content__card .icon, main .product-section .product-container-furniture .healthcare-content__card .icon, main .product-section .product-container-furniture .furniture-content__card .icon {
   align-self: end;
   padding: 5px;
+  cursor: pointer;
 }
 main .product-section .product-container-healthcare .healthcare-content__card .image, main .product-section .product-container-furniture .healthcare-content__card .image, main .product-section .product-container-furniture .furniture-content__card .image {
   width: 160px;
@@ -163,6 +205,7 @@ main .product-section .product-container-furniture .furniture-content__card {
   color: #FFEFE7;
 }
 main .info-section {
+  margin-top: 50px;
   margin-bottom: 10px;
 }
 main .info-section h2 {
@@ -180,11 +223,14 @@ main .info-section h2 {
 }
 main .info-section .container-aboutus__information {
   width: 90%;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   place-items: center;
   margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 @media screen and (min-width: 768px) {
   main .info-section .container-aboutus__information {
@@ -208,10 +254,6 @@ main .info-section .container-aboutus__information .information__mission p, main
   color: #E86424;
   text-align: center;
 }
-main .info-section .container-aboutus__information .information__innovation {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
 main .info-section .title-gallery {
   padding-bottom: 30px;
 }
@@ -232,6 +274,11 @@ main .info-section .container-gallery .container-gallery__photos {
     justify-content: space-evenly;
   }
 }
+@media screen and (min-width: 1024px) {
+  main .info-section .container-gallery .container-gallery__photos {
+    gap: 80px;
+  }
+}
 main .info-section .container-gallery .container-gallery__photos img {
   width: 100%;
   max-width: 320px;
@@ -239,6 +286,10 @@ main .info-section .container-gallery .container-gallery__photos img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 8px;
+}
+main .info-section .container-gallery .container-gallery__photos img:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
 }
 main .info-section .title-location {
   padding-bottom: 30px;
