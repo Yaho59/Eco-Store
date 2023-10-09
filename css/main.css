@@ -25,6 +25,7 @@ header .nav-menu {
 header .nav-menu .logo {
   color: #7C6A0A;
   font-size: 1.4rem;
+  font-weight: 600;
 }
 header .nav-menu .nav-menu__container-icons {
   display: flex;
