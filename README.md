@@ -1,8 +1,8 @@
 # Eco-Store
 
 ## Introducción
-Landing page de catálogos de productos de cuidados de la salud y de decoraciones de hogar .
-Este proyecto fue desarrollado en  un curso de platzi💚🚀 
+Landing page de catálogos de productos de cuidados de la salud y de decoraciones de hogar.
+Este proyecto fue desarrollado en un curso de platzi💚🚀 
 
 ## Construido con
 

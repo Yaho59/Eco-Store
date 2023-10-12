@@ -30,9 +30,20 @@ header .nav-menu .logo {
 header .nav-menu .nav-menu__container-icons {
   display: flex;
   list-style: none;
+  gap: 10px;
 }
 header .nav-menu .nav-menu__container-icons .icon-destok {
   display: none;
+}
+@media screen and (min-width: 1024px) {
+  header .nav-menu .nav-menu__container-icons .icon-destok {
+    display: block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .nav-menu .nav-menu__container-icons .icon-menu {
+    display: none;
+  }
 }
 
 main {
@@ -266,7 +277,7 @@ main .info-section .container-gallery .container-gallery__photos {
   display: flex;
   flex-direction: column;
   place-items: center;
-  gap: 10px;
+  gap: 25px;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {

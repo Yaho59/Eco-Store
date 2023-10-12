@@ -50,9 +50,20 @@ header {
         .nav-menu__container-icons {
             display: flex;
             list-style: none;
+            gap: 10px;
 
             .icon-destok {
                 display: none;
+
+                @include portatil(){
+                    display: block;
+                }
+            }
+
+            .icon-menu{
+                @include portatil(){
+                    display: none;
+                }
             }
         }
     }
@@ -306,7 +317,7 @@ main {
                 display: flex;
                 flex-direction: column;
                 place-items: center;
-                gap: 10px;
+                gap: 25px;
                 margin-bottom: 20px;
                 
                 @include tablet(){
